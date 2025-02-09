@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class rouge : MonoBehaviour
 {
@@ -12,12 +13,24 @@ public class rouge : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
-        if (gameObject.CompareTag("rouge"))
-{
-    Destroy(gameObject);
-}
+//         if (gameObject.CompareTag("Cible"))
+// {
+//     Destroy(gameObject);
+// }
+    }
+
+void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Cible"))
+        {
+            
+            Destroy(collision.gameObject);
+        } else if(collision.gameObject.CompareTag("terminus")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
