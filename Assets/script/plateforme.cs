@@ -6,7 +6,7 @@ public class DesactiverObjet : MonoBehaviour
 {
     public GameObject objetADesactiver;
     // Start is called before the first frame update
-    void Desactiver()
+    public void Desactiver()
     {
         objetADesactiver.SetActive(false);
     }
