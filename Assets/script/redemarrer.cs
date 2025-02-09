@@ -1,21 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class redemarrer : MonoBehaviour
+public class Redemarrer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Redemarrer()
+    // Fonction publique pour recharger la scène
+    public void Recommencer()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        string nomSceneActuel = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(nomSceneActuel);
     }
 }
