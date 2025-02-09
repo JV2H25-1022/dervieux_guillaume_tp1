@@ -15,6 +15,9 @@ public class rouge : MonoBehaviour
     void Update()
     {
         
-        objetADesactiver.SetActive(false);
+        if (gameObject.CompareTag("rouge"))
+{
+    Destroy(gameObject);
+}
     }
 }
